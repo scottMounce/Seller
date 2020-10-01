@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
   })
 
 
-const sequelize = new Sequelize("petsy_seller", "root", "password",  {dialect: 'mysql', dialectOptions: {multipleStatements: true}})
+const db = new Sequelize("petsy_seller", "root", "password",  {dialect: 'mysql', dialectOptions: {multipleStatements: true}})
 
 
-module.exports = sequelize;
+module.exports = db;

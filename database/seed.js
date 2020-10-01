@@ -1,4 +1,4 @@
-const sequelize = require('./index.js');
+const db = require('./index.js');
 const SellerTable = require('./Seller.js');
 const FaqTable = require('./Faq.js');
 const ItemTable = require('./Item/js');
@@ -22,7 +22,7 @@ let generateSellerData = function() {
 
     let params = {
       sellerName: name,
-      storeName: faker.company.companyName,
+      storeName: faker.company.companyName(),
       shippingSpeedSlowest: shippingSpeed,
       shippingSpeedFastest: shippingSpeed + 5,
       sellerLocation: location,
