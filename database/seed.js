@@ -1,7 +1,7 @@
 const db = require('./index.js');
 const SellerTable = require('./Seller.js');
 const FaqTable = require('./Faq.js');
-const ItemTable = require('./Item/js');
+const ItemTable = require('./Item.js');
 const faker = require('faker');
 
 //swquelize association between tables
@@ -16,7 +16,7 @@ let generateSellerData = function() {
   let data = [];
 
   for (let i = 1; i <= 10; i++) {
-    let name = faker.name.firstName() + faker.name.lastName();
+    let name = faker.name.firstName() +' ' faker.name.lastName();
     let shippingSpeed = Math.floor(Math.random() * 8);
     let location = faker.address.city() + ', ' + faker.address.state()
 
@@ -40,11 +40,12 @@ let generateFaqData = function() {
   let data = [];
 
   for (let i = 1; i <= 20; i++) {
-    let randomQuestion = faker.lorem.sentence().substring(0, str.length - 1) + "?"
+    //let randomQuestion = faker.lorem.sentence().substring(0, str.length - 1) + "?"
 
     let params = {
       question: faker.lorem.sentence(5, "?"),
-      answer = faker.lorem.sentences(5),
+      //question: randomQuestion,
+      answer: faker.lorem.sentences(2),
 
       sellerID: Math.ceil(i/2)
     }
