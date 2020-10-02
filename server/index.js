@@ -17,7 +17,7 @@ app.listen(port, () => {
 
 //handle get request by provided item's id
 app.get('/api/item/:itemId', (req, res) => {
-  db.query(`SELECT * FROM itemTable WHERE id = ${req.param('itemId')};`, { type: Sequelize.QueryTypes.SELECT })
+  db.query(`SELECT * FROM itemTables WHERE id = ${req.param('itemId')};`, { type: Sequelize.QueryTypes.SELECT })
     .then((result) => {
       res.json(result)
     })
@@ -46,7 +46,7 @@ app.get('/api/seller/:sellerId', (req, res) => {
 
 //handle get request by provided faq's id
 app.get('/api/faq/:faqId', (req, res) => {
-  db.query(`SELECT * FROM faqTable WHERE id = ${req.param('faqId')};`, { type: Sequelize.QueryTypes.SELECT })
+  db.query(`SELECT * FROM faqTables WHERE id = ${req.param('faqId')};`, { type: Sequelize.QueryTypes.SELECT })
     .then((result) => {
       res.json(result)
     })
