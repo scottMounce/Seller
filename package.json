@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/HRR48-FEC-SquawkinPhoenix/Seller#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.0",
     "axios": "^0.20.0",
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
