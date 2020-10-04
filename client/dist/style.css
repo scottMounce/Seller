@@ -6,6 +6,11 @@ body {
   width: 462px;
 }
 
+.info-wrap {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .item-info {
   margin-bottom: 36px !important;
 
@@ -53,6 +58,23 @@ i {
 }
 .learn-more-button-wrapper {
   text-align: center
+}
+
+.learn-more-about-this-item {
+  margin-top: 6px;
+  color: #222222;
+  line-height: 1.4;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 24px;
+  background-color: white;
+}
+
+.learn-more-about-this-item:hover {
+  transition: opacity 0.5s, background-color 0.5s;
+  background-color: #E1E4E7;
 }
 
 button {
@@ -159,4 +181,59 @@ button {
   font-size: 25px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 10px !important;
+}
+
+.country-selector {
+  background-color: white;
+  transition: 0.5s;
+  appearance: none;
+  box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.15);
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  height: 48px;
+  padding-left: 12px;
+  padding-right: 36px;
+  width: 100%;
+  border-radius: 6px;
+  border-color: rgba(85, 84, 84, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  color: #222222;
+  text-indent: 0.01px;
+  cursor: pointer;
+}
+
+.country-selector:hover {
+  transition: box-shadow 0.5s;
+  box-shadow: 0 1px 5px 0 #888888;
+  border-color: rgb(105, 104, 104);
+}
+
+.zipcode-input {
+  background-color: white;
+  transition: 0.5s;
+  appearance: none;
+  box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  border-color: rgba(85, 84, 84, 0.15);
+  color: #222222;
+  display: block;
+  font-size: 16px;
+  line-height: 28px;
+  height: 48px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.zipcode-input:hover {
+  transition: box-shadow 0.5s;
+  box-shadow: 0 1px 8px 0 #888888;
+  border-color: rgb(105, 104, 104);
 }
