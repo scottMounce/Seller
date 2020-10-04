@@ -47,9 +47,7 @@ class App extends React.Component {
                 <p>
                 Pie...me oh my. <br></br>
                 <br></br>
-                A new favorite in the Ticketybootique, this pumpkin pie costume hat has us in stitches. Carefully sewn so it can be enjoyed for many seasons and fun occasions, what is sweeter than your furry friend's cute face peeping out of a slice of pie, with a little bit of whipped cream on top? We're not sure there is anything better!<br></br>
-                <br></br>
-                Made with soft brown felt, this hat features embellishments such as a scalloped stitch over the crust and a nice sized dollop of bright white whipped cream stitched securely onto the costume. Lightweight so that it's not cumbersome on your pet, this is part of the Easy Wear line for quick and simple photoshoots or costumed dress ups. Simply place the costume on your pet by gently easing their face through the costume hole.
+                A new favorite in the Ticketybootique, this pumpkin pie costume hat has us in stitches. Carefully sewn so it can be enjoyed for many seasons and fun occasions, what is sweeter than your furry friend's cute face peeping out of a slice of pie, with a little bit of whipped cream on top? We're not sure there is anything better!
                 </p>
               </div>
               <div class="learn-more">
@@ -109,9 +107,9 @@ class App extends React.Component {
             </div>
             <div class="destination">
               <div class="location-selector">
-                <div class="selector-head">
+                <button class="selector-head">
                   Deliver to United States, 00000
-                </div>
+                </button>
                 <div class="selectors">
                   <div class="country">
                     <div class="country-selector-title">
@@ -144,7 +142,15 @@ class App extends React.Component {
           </div>
 
           <div class="seller-info">
-
+          <div className="seller-title">Meet your sellers</div>
+          <div className="seller-personal-info">
+            <img src="https://robohash.org/sitsequiquia.png?size=300x300&set=set1" className="seller-image"></img>
+            <div className="seller-name">Michelle Duni</div>
+            <div className="store-info">
+              Owner of <a href="#" className="store-name">Ticketybootique</a>
+            </div>
+          </div>
+          <button className="message-seller-button">Message Michelle</button>
           </div>
         </div>
 

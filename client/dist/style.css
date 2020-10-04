@@ -46,11 +46,26 @@ i {
   margin-bottom: 10px !important;
 }
 
-.description-body {
+/* .description-body {
   color: #222;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size:16px;
   line-height:28px;
+} */
+
+.description-body {
+  color: #222;
+  white-space: pre-wrap;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+
+  transition: height 1s;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  height: 250px;
+  overflow-y: hidden;
+  box-sizing: border-box;
 }
 
 .learn-more {
@@ -152,7 +167,8 @@ button {
 }
 
 .shipping-cost {
-  display: flex
+  display: flex;
+  margin-bottom: 35px !important;
 }
 
 .cost-to-ship {
@@ -183,6 +199,34 @@ button {
   margin-bottom: 10px !important;
 }
 
+.destination {
+  margin-bottom: 35px !important;
+}
+
+.selector-head {
+  margin-top: 6px;
+  color: #222222;
+  line-height: 1.4;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 15px;
+  border-radius: 24px;
+  background-color: white;
+  margin-bottom: 15px !important;
+}
+
+.selector-head:hover {
+  transition: opacity 0.5s, background-color 0.5s;
+  background-color: #E1E4E7;
+}
+
+.country-selector-title {
+  color: #222;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:16px;
+  line-height:28px;
+}
+
 .country-selector {
   background-color: white;
   transition: 0.5s;
@@ -202,12 +246,20 @@ button {
   color: #222222;
   text-indent: 0.01px;
   cursor: pointer;
+  margin-bottom: 15px !important;
 }
 
 .country-selector:hover {
   transition: box-shadow 0.5s;
   box-shadow: 0 1px 5px 0 #888888;
   border-color: rgb(105, 104, 104);
+}
+
+.zipcode-title {
+  color: #222;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:16px;
+  line-height:28px;
 }
 
 .zipcode-input {
@@ -236,4 +288,92 @@ button {
   transition: box-shadow 0.5s;
   box-shadow: 0 1px 8px 0 #888888;
   border-color: rgb(105, 104, 104);
+}
+
+.seller-title {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  color: #595959 !important;
+  padding-bottom: 12px !important;
+  box-sizing: border-box;
+}
+
+.seller-image {
+  height: 80px !important;
+  width: 75px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  box-sizing: border-box;
+  margin-right: 6px;
+  float: left;
+}
+
+.seller-name {
+  color: #222;
+  font-size:16px;
+  line-height:28px;
+  margin-bottom: 6px !important;
+  top: 10px;
+  left: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.store-info {
+  font-size: 13px;
+  line-height: 18px;
+  color: #595959 !important;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.store-name {
+  text-decoration: underline;
+  transition: opacity 200ms ease-out;
+  position: relative;
+  z-index: 0;
+  background: transparent;
+  color: #595959 !important;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.message-seller-button {
+  width: 100% !important;
+  background: none;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 6px;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 24px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  min-height: 48px;
+  min-width: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.message-seller-button:hover {
+  transition: -webkit-transform 0.5s, -moz-transform 0.5s;
+  -webkit-transform: scale(1.02,1.02);
+  -moz-transform: scale(1.02,1.02);
+  box-shadow: 0 1px 20px 0 rgba(34, 34, 34, 0.15);
 }
