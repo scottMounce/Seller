@@ -4,7 +4,7 @@ const FaqTable = require('./Faq.js');
 const ItemTable = require('./Item.js');
 const faker = require('faker');
 
-//swquelize association between tables
+// swquelize association between tables
 SellerTable.hasMany(FaqTable);
 FaqTable.belongsTo(SellerTable);
 
@@ -66,7 +66,7 @@ let generateItemData = function() {
     let params = {
       handmade: Math.random() >= 0.1,
       materials: materialList[randomMaterialIndex],
-      description:faker.lorem.paragraphs(3, "."),
+      description:faker.lorem.paragraphs(3, "<br></br>"),
 
       sellerID: Math.ceil(i/10)
     }
@@ -83,17 +83,17 @@ let insertData = function() {
 
   SellerTable.sync({force: true})
     .then(function() {
-      return SellerTable.bulkCreate(sellerData)
+      SellerTable.bulkCreate(sellerData)
     })
     .then(function() {
       FaqTable.sync({force:true})
         .then(function() {
-          return FaqTable.bulkCreate(faqData)
+          FaqTable.bulkCreate(faqData)
         })
         .then(function() {
           ItemTable.sync({force: true})
             .then(function() {
-              return ItemTable.bulkCreate(itemData)
+              ItemTable.bulkCreate(itemData)
             })
             .catch(function(err) {
               console.log("Failed to insert into itemTable", err)
