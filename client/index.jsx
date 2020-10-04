@@ -2,6 +2,7 @@ import React from 'react';
 import reactDOM from 'react-dom';
 import axios from 'axios';
 
+import SampleData from './sampleData.js';
 
 class App extends React.Component {
 
@@ -16,10 +17,43 @@ class App extends React.Component {
     }
   }
 
+  getData() {
+    axios({
+      method: 'get',
+      url: '/api/item/1'
+    })
+      .then((res) => {
+        console.log('item getting: ', res.data[0])
+        this.setState({item: res.data[0]})
+        console.log(this.state)
+      })
+      .then(
+        axios({
+          method: 'get',
+          url: '/api/seller/1'
+        })
+          .then ((respond) => {
+            console.log('seller getting:', respond.data[0])
+            this.setState({seller: respond.data[0]})
+            console.log(this.state)
+          })
+          .then(
+            axios({
+              method: 'get',
+              url: '/api/faq/1'
+            })
+              .then ((resp) => {
+                console.log('faq getting:', resp.data[0])
+                this.setState({faq: resp.data[0]})
+                console.log(this.state)
+              })
+          )
+      )
+  }
 
-  //hide and show overflow
-  // if words over 200, trim and save in trimmed p,
-
+  componentDidMount() {
+    this.getData()
+  }
 
   render() {
     //debugger;
@@ -144,7 +178,7 @@ class App extends React.Component {
           <div class="seller-info">
           <div className="seller-title">Meet your sellers</div>
           <div className="seller-personal-info">
-            <img src="https://robohash.org/sitsequiquia.png?size=300x300&set=set1" className="seller-image"></img>
+            <img src="https://i.etsystatic.com/iusa/842395/69699441/iusa_75x75.69699441_3vwd.jpg?version=0" className="seller-image"></img>
             <div className="seller-name">Michelle Duni</div>
             <div className="store-info">
               Owner of <a href="#" className="store-name">Ticketybootique</a>
