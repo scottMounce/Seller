@@ -15,7 +15,21 @@ ItemTable.belongsTo(SellerTable);
 let generateSellerData = function() {
   let data = [];
 
-  for (let i = 1; i <= 10; i++) {
+  //put original website's info in as id 1
+  let origianlParam = {
+    sellerName: "Michelle Duni",
+    storeName: "Ticketybootique",
+    shippingSpeedSlowest: 9,
+    shippingSpeedFastest: 7,
+    sellerLocation: "Toledo, Ohio",
+    exchangePossibility: 1,
+    returnCancelPossibility: 0,
+    profilePicture: "https://i.etsystatic.com/iusa/842395/69699441/iusa_75x75.69699441_3vwd.jpg?version=0"
+  }
+  data.push(origianlParam)
+
+  //generate 9 more
+  for (let i = 2; i <= 10; i++) {
     let name = faker.name.firstName() +' ' + faker.name.lastName();
     let shippingSpeed = Math.floor(Math.random() * 8);
     let location = faker.address.city() + ', ' + faker.address.state()
@@ -27,7 +41,8 @@ let generateSellerData = function() {
       shippingSpeedFastest: shippingSpeed + 5,
       sellerLocation: location,
       exchangePossibility: Math.random() >= 0.1, //90% probability of get "true"
-      returnCancelPossibility: Math.random() >= 0.1
+      returnCancelPossibility: Math.random() >= 0.1,
+      profilePicture: faker.image.avatar()
     }
 
     data.push(params)
@@ -35,19 +50,26 @@ let generateSellerData = function() {
   return data
 }
 
-//generate 20 FAQs
+//generate 10 FAQs
 let generateFaqData = function() {
   let data = [];
 
-  for (let i = 1; i <= 20; i++) {
-    //let randomQuestion = faker.lorem.sentence().substring(0, str.length - 1) + "?"
+  //put original website's info in as id 1
+  let origianlParam = {
+    question: "Sizing details",
+    answer: "My number one question I get is, what size for a certain lbs cat? Cats (and dogs for that matter!) are so amazing and varied by breed, both pedigree and domestic cuties. The best thing to do is get me a circumference (that's a full circle!) in inches just behind the eyes and under the chin.<br></br><br></br>Take a piece of string or shoe string! You can go to iruler.net which will conform to the size of your screen you are viewing the website on and then measure to that website. Then compare to my sizings listed for every item.<br></br><br></br>Not the right size? *Sometimes* I can do custom. It depends on how large! Contact me with your gathered size from your pet and we can go from there. Hope this helps!",
+    sellerID: 1
+  }
+  data.push(origianlParam)
 
+  //generate 9 more FAQs
+  for (let i = 2; i <= 10; i++) {
     let params = {
       question: faker.lorem.sentence(5, "?"),
       //question: randomQuestion,
       answer: faker.lorem.sentences(2),
 
-      sellerID: Math.ceil(i/2)
+      sellerID: i
     }
 
     data.push(params)
@@ -60,7 +82,17 @@ let generateItemData = function() {
   let data = [];
   let materialList = ["Cotton", "Metal", "Glass", "Wood", "Felt", "Thread"]
 
-  for(let i = 1; i <= 100; i++) {
+  //put original website's info in as id 1
+  let origianlParam = {
+    handmade : 1,
+    materials: "Felt, Thread",
+    description: `Pie...me oh my.<br></br><br></br>A new favorite in the Ticketybootique, this pumpkin pie costume hat has us in stitches. Carefully sewn so it can be enjoyed for many seasons and fun occasions, what is sweeter than your furry friend's cute face peeping out of a slice of pie, with a little bit of whipped cream on top? We're not sure there is anything better!<br></br><br></br>Made with soft brown felt, this hat features embellishments such as a scalloped stitch over the crust and a nice sized dollop of bright white whipped cream stitched securely onto the costume. Lightweight so that it's not cumbersome on your pet, this is part of the Easy Wear line for quick and simple photoshoots or costumed dress ups. Simply place the costume on your pet by gently easing their face through the costume hole.<br></br><br></br>***Cat meowdel is a tiny 5.6 lb cat. Please measure your pets before purchasing***<br></br>This hat comes in three sizes:<br></br><br></br>Small 2.5" diameter (across the hole)<br></br>and ~8" circumference (around the entire edge of the hole opening)<br></br><br></br>Medium 3" diameter (across the hole)<br></br>and ~9.5" circumference (around the entire edge of the hole opening)<br></br><br></br>Large 3.5" diameter (across the hole)<br></br>and 11" circumference (around the entire edge of the hole opening)<br></br><br></br>For an certain fit, feel free to contact the shop for a perfect sizing!`,
+    sellerID: 1
+  }
+  data.push(origianlParam)
+
+  //generate 99 more items
+  for(let i = 2; i <= 100; i++) {
     let randomMaterialIndex = Math.floor(Math.random() * materialList.length)
 
     let params = {
