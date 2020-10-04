@@ -1,0 +1,379 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: rgb(73, 73, 73);
+  width: 462px;
+}
+
+.info-wrap {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.item-info {
+  margin-bottom: 36px !important;
+
+}
+
+.handmade {
+  margin-bottom: 18px !important;
+}
+i {
+  color: black;
+  margin-right: 15px;
+}
+
+.material {
+  margin-bottom: 18px !important;
+}
+
+.material-title {
+  margin-bottom: 10px !important;
+}
+
+.material-list {
+  color: #222;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.description {
+
+}
+
+.description-title {
+  margin-bottom: 10px !important;
+}
+
+/* .description-body {
+  color: #222;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:16px;
+  line-height:28px;
+} */
+
+.description-body {
+  color: #222;
+  white-space: pre-wrap;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+
+  transition: height 1s;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  height: 250px;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+.learn-more {
+
+}
+.learn-more-button-wrapper {
+  text-align: center
+}
+
+.learn-more-about-this-item {
+  margin-top: 6px;
+  color: #222222;
+  line-height: 1.4;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 24px;
+  background-color: white;
+}
+
+.learn-more-about-this-item:hover {
+  transition: opacity 0.5s, background-color 0.5s;
+  background-color: #E1E4E7;
+}
+
+button {
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.estimated-arrival {
+  margin-bottom: 18px !important;
+}
+
+.estimated-arrival-title {
+  padding-bottom: 3px;
+  text-decoration:underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+}
+
+
+.estimated-arrival-date {
+  color: #222;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.shipping-timetable {
+  display: flex;
+  margin-bottom: 30px !important;
+}
+
+.order-date {
+  order: 1;
+  flex-grow: 1;
+}
+
+.order-ship {
+  order: 2;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.order-deliver {
+  order: 3;
+  flex-grow: 1;
+  text-align: right
+}
+
+.timetable-date {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 8px !important;
+}
+
+.shipping-icon {
+  margin-bottom: 10px !important;
+}
+
+.circle-icon {
+  background: rgb(230, 229, 229);
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.under-dash-line {
+  color: #222;
+  padding-bottom: 3px;
+  text-decoration:underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+}
+
+.shipping-cost {
+  display: flex;
+  margin-bottom: 35px !important;
+}
+
+.cost-to-ship {
+  order: 1;
+  flex-grow: 1;
+}
+
+.exchanges {
+  order: 2;
+  flex-grow: 1;
+}
+
+.shipping-cost-title {
+  margin-bottom: 10px !important;
+}
+
+.cost-display {
+  color: #222;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 10px !important;
+}
+
+.exchange-display {
+  color: #222;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 10px !important;
+}
+
+.destination {
+  margin-bottom: 35px !important;
+}
+
+.selector-head {
+  margin-top: 6px;
+  color: #222222;
+  line-height: 1.4;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 15px;
+  border-radius: 24px;
+  background-color: white;
+  margin-bottom: 15px !important;
+}
+
+.selector-head:hover {
+  transition: opacity 0.5s, background-color 0.5s;
+  background-color: #E1E4E7;
+}
+
+.country-selector-title {
+  color: #222;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:16px;
+  line-height:28px;
+}
+
+.country-selector {
+  background-color: white;
+  transition: 0.5s;
+  appearance: none;
+  box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.15);
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  height: 48px;
+  padding-left: 12px;
+  padding-right: 36px;
+  width: 100%;
+  border-radius: 6px;
+  border-color: rgba(85, 84, 84, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  color: #222222;
+  text-indent: 0.01px;
+  cursor: pointer;
+  margin-bottom: 15px !important;
+}
+
+.country-selector:hover {
+  transition: box-shadow 0.5s;
+  box-shadow: 0 1px 5px 0 #888888;
+  border-color: rgb(105, 104, 104);
+}
+
+.zipcode-title {
+  color: #222;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:16px;
+  line-height:28px;
+}
+
+.zipcode-input {
+  background-color: white;
+  transition: 0.5s;
+  appearance: none;
+  box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  border-color: rgba(85, 84, 84, 0.15);
+  color: #222222;
+  display: block;
+  font-size: 16px;
+  line-height: 28px;
+  height: 48px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.zipcode-input:hover {
+  transition: box-shadow 0.5s;
+  box-shadow: 0 1px 8px 0 #888888;
+  border-color: rgb(105, 104, 104);
+}
+
+.seller-title {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  color: #595959 !important;
+  padding-bottom: 12px !important;
+  box-sizing: border-box;
+}
+
+.seller-image {
+  height: 80px !important;
+  width: 75px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  box-sizing: border-box;
+  margin-right: 6px;
+  float: left;
+}
+
+.seller-name {
+  color: #222;
+  font-size:16px;
+  line-height:28px;
+  margin-bottom: 6px !important;
+  top: 10px;
+  left: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.store-info {
+  font-size: 13px;
+  line-height: 18px;
+  color: #595959 !important;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.store-name {
+  text-decoration: underline;
+  transition: opacity 200ms ease-out;
+  position: relative;
+  z-index: 0;
+  background: transparent;
+  color: #595959 !important;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.message-seller-button {
+  width: 100% !important;
+  background: none;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 6px;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 24px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  min-height: 48px;
+  min-width: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.message-seller-button:hover {
+  transition: -webkit-transform 0.5s, -moz-transform 0.5s;
+  -webkit-transform: scale(1.02,1.02);
+  -moz-transform: scale(1.02,1.02);
+  box-shadow: 0 1px 20px 0 rgba(34, 34, 34, 0.15);
+}

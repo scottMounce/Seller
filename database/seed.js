@@ -16,7 +16,7 @@ let generateSellerData = function() {
   let data = [];
 
   for (let i = 1; i <= 10; i++) {
-    let name = faker.name.firstName() +' ' faker.name.lastName();
+    let name = faker.name.firstName() +' ' + faker.name.lastName();
     let shippingSpeed = Math.floor(Math.random() * 8);
     let location = faker.address.city() + ', ' + faker.address.state()
 
