@@ -1,5 +1,5 @@
 import React from 'react';
-
+import moment from 'moment-business-days';
 
 
 
@@ -7,8 +7,9 @@ class Shipping extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      country: 'United State',
+      country: 'United States',
       zipcode: 10000,
+      today: "Oct 5",
     }
   }
 
@@ -33,6 +34,15 @@ class Shipping extends React.Component {
     }
   }
 
+  getShippingCost() {
+    if(this.state.country === "United States"){
+      return "$3.90"
+    } else {
+      return "$17.25"
+    }
+  }
+
+
   render() {
     return (
       <div class="shipping-info">
@@ -47,17 +57,21 @@ class Shipping extends React.Component {
         <div class="shipping-timetable">
           <div class="order-date">
             <div class="shipping-icon"><i class="fas fa-hand-paper circle-icon"></i></div>
-            <div class="timetable-date">Oct 4</div>
+            <div class="timetable-date">{moment().format("MMM D")}</div>
             <div class="order-placed" class="under-dash-line">Order placed</div>
           </div>
           <div class="order-ship">
-          <div class="shipping-icon"><i class="fas fa-truck circle-icon"></i></div>
-            <div class="timetable-date">Oct 14-16</div>
+            <div class="shipping-icon"><i class="fas fa-truck circle-icon"></i></div>
+            <div class="timetable-date">
+              {moment().businessAdd(this.props.seller.shippingSpeedFastest).format("MMM D")}-{moment().businessAdd(this.props.seller.shippingSpeedSlowest).format("D")}
+            </div>
             <div id="order-ships" class="under-dash-line">Order ships</div>
           </div>
           <div class="order-deliver">
-          <div class="shipping-icon"><i class="	fas fa-gift circle-icon"></i></div>
-            <div class="timetable-date">Oct 19-21</div>
+            <div class="shipping-icon"><i class="	fas fa-gift circle-icon"></i></div>
+            <div class="timetable-date">
+              {moment().businessAdd(this.props.seller.shippingSpeedFastest + 5).format("MMM D")}-{moment().businessAdd(this.props.seller.shippingSpeedSlowest + 5).format("D")}
+            </div>
             <div class="deliverd" class="under-dash-line">Delivered!</div>
           </div>
         </div>
@@ -67,7 +81,7 @@ class Shipping extends React.Component {
               Cost to ship
             </div>
             <div class="cost-display">
-              $3.90
+              {this.getShippingCost()}
             </div>
           </div>
           <div class="exchanges">

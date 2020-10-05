@@ -4,7 +4,9 @@ import axios from 'axios';
 
 import Item from './src/Item.jsx';
 import Shipping from './src/Shipping.jsx';
+import Faq from './src/Faq.jsx'
 import Seller from './src/Seller.jsx';
+
 
 class App extends React.Component {
 
@@ -14,8 +16,7 @@ class App extends React.Component {
     this.state = {
       item: {},
       seller: {},
-      faq: {},
-      countries: ["United States"]
+      faq: {}
     }
   }
 
@@ -67,7 +68,7 @@ class App extends React.Component {
 
           <Shipping seller={this.state.seller} />
 
-          <div class="faq-info"></div>
+          <Faq faq={this.state.faq} />
 
           <Seller seller={this.state.seller} />
 
