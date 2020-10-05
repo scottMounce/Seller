@@ -3,6 +3,7 @@ import reactDOM from 'react-dom';
 import axios from 'axios';
 
 import SampleData from './sampleData.js';
+import Item from './src/Item.jsx'
 
 class App extends React.Component {
 
@@ -61,36 +62,9 @@ class App extends React.Component {
     return (
       <div class="info">
         <div class="info-wrap">
-          <div class="item-info">
-            <div class="handmade">
-              <i class="fas fa-hand-paper fa-2x"></i>Handmade
-            </div>
-            <div class="material">
-              <div class="material-title">
-                Materials
-              </div>
-              <div class="material-list">
-                Felt, Thread
-              </div>
-            </div>
-            <div class="description">
-              <div class="description-title">
-                Description
-              </div>
-              <div class="description-body">
-                <p>
-                Pie...me oh my. <br></br>
-                <br></br>
-                A new favorite in the Ticketybootique, this pumpkin pie costume hat has us in stitches. Carefully sewn so it can be enjoyed for many seasons and fun occasions, what is sweeter than your furry friend's cute face peeping out of a slice of pie, with a little bit of whipped cream on top? We're not sure there is anything better!
-                </p>
-              </div>
-              <div class="learn-more">
-                <div class="learn-more-button-wrapper">
-                <button class="learn-more-about-this-item">Learn more about this item</button>
-                </div>
-              </div>
-            </div>
-          </div>
+
+            <Item item={this.state.item} />
+
 
           <div class="shipping-info">
             <div class="estimated-arrival">
