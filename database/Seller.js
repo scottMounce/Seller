@@ -9,7 +9,8 @@ const SellerTable = db.define('sellerTable', {
   shippingSpeedFastest: {type: Sequelize.INTEGER, allowNull: false, defaultValue: 8},
   sellerLocation: {type:Sequelize.STRING, allowNull: false},
   exchangePossibility: {type:Sequelize.BOOLEAN, allowNull: false, defaultValue: true},
-  returnCancelPossibility: {type:Sequelize.BOOLEAN, allowNull: false, defaultValue: true}
+  returnCancelPossibility: {type:Sequelize.BOOLEAN, allowNull: false, defaultValue: true},
+  profilePicture: {type: Sequelize.STRING, allowNull: false}
 });
 
 module.exports = SellerTable;

@@ -25,12 +25,7 @@ app.get('/api/item/:itemId', (req, res) => {
       res.send(err)
     })
 })
-  // .then((result) => {
-  //   res.sendFile(path.join(__dirname, '/../client/dist/index.html'))
-  // })
-  // .catch((err) => {
-  //   res.send(err)
-  // })
+
 
 //handle get request by provided seller's id
 app.get('/api/seller/:sellerId', (req, res) => {
