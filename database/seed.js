@@ -57,7 +57,7 @@ let generateFaqData = function() {
   //put original website's info in as id 1
   let origianlParam = {
     question: "Sizing details",
-    answer: "My number one question I get is, what size for a certain lbs cat? Cats (and dogs for that matter!) are so amazing and varied by breed, both pedigree and domestic cuties. The best thing to do is get me a circumference (that's a full circle!) in inches just behind the eyes and under the chin.<br></br><br></br>Take a piece of string or shoe string! You can go to iruler.net which will conform to the size of your screen you are viewing the website on and then measure to that website. Then compare to my sizings listed for every item.<br></br><br></br>Not the right size? *Sometimes* I can do custom. It depends on how large! Contact me with your gathered size from your pet and we can go from there. Hope this helps!",
+    answer: "My number one question I get is, what size for a certain lbs cat? Cats (and dogs for that matter!) are so amazing and varied by breed, both pedigree and domestic cuties. The best thing to do is get me a circumference (that's a full circle!) in inches just behind the eyes and under the chin.\n \nTake a piece of string or shoe string! You can go to iruler.net which will conform to the size of your screen you are viewing the website on and then measure to that website. Then compare to my sizings listed for every item.\n \nNot the right size? *Sometimes* I can do custom. It depends on how large! Contact me with your gathered size from your pet and we can go from there. Hope this helps!",
     sellerID: 1
   }
   data.push(origianlParam)
