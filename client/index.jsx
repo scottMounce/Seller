@@ -5,10 +5,10 @@ import axios from 'axios';
 import Item from './src/Item.jsx';
 import Shipping from './src/Shipping.jsx';
 import Faq from './src/Faq.jsx'
-import Seller from './src/Seller.jsx';
+import SellerInfo from './src/SellerInfo.jsx';
 
 
-class App extends React.Component {
+class Seller extends React.Component {
 
   constructor(props) {
     super(props);
@@ -26,9 +26,7 @@ class App extends React.Component {
       url: '/api/item/1'
     })
       .then((res) => {
-        console.log('item getting: ', res.data[0])
         this.setState({item: res.data[0]})
-        console.log(this.state)
       })
       .then(
         axios({
@@ -36,9 +34,7 @@ class App extends React.Component {
           url: `/api/seller/1`
         })
           .then ((respond) => {
-            console.log('seller getting:', respond.data[0])
             this.setState({seller: respond.data[0]})
-            console.log(this.state)
           })
           .then(
             axios({
@@ -46,7 +42,6 @@ class App extends React.Component {
               url: '/api/faq/1'
             })
               .then ((resp) => {
-                console.log('faq getting:', resp.data[0])
                 this.setState({faq: resp.data[0]})
                 console.log(this.state)
               })
@@ -70,7 +65,7 @@ class App extends React.Component {
 
           <Faq faq={this.state.faq} />
 
-          <Seller seller={this.state.seller} />
+          <SellerInfo seller={this.state.seller} />
 
         </div>
       </div>
@@ -78,4 +73,4 @@ class App extends React.Component {
   }
 }
 
-reactDOM.render(<App />, document.getElementById('app'));
+reactDOM.render(<Seller />, document.getElementById('seller'));
