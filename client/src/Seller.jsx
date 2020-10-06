@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SellerInfo = ({seller}) => {
+const Seller = ({seller}) => {
   return (
     <div class="seller-info">
       <div className="seller-title">Meet your sellers</div>
@@ -18,4 +18,4 @@ const SellerInfo = ({seller}) => {
   )
 }
 
-export default SellerInfo
+export default Seller
