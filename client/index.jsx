@@ -23,15 +23,16 @@ class Seller extends React.Component {
   getData() {
     axios({
       method: 'get',
-      url: '/api/item/1'
+      url: 'http://localhost:3004/api/item/1'
     })
       .then((res) => {
+        console.log('item getting: ', res.data[0])
         this.setState({item: res.data[0]})
       })
       .then(
         axios({
           method: 'get',
-          url: `/api/seller/1`
+          url: `http://localhost:3004/api/seller/1`
         })
           .then ((respond) => {
             this.setState({seller: respond.data[0]})
@@ -39,7 +40,7 @@ class Seller extends React.Component {
           .then(
             axios({
               method: 'get',
-              url: '/api/faq/1'
+              url: 'http://localhost:3004/api/faq/1'
             })
               .then ((resp) => {
                 this.setState({faq: resp.data[0]})
