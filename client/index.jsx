@@ -5,10 +5,10 @@ import axios from 'axios';
 import Item from './src/Item.jsx';
 import Shipping from './src/Shipping.jsx';
 import Faq from './src/Faq.jsx'
-import Seller from './src/Seller.jsx';
+import SellerInfo from './src/SellerInfo.jsx';
 
 
-class App extends React.Component {
+class Seller extends React.Component {
 
   constructor(props) {
     super(props);
@@ -66,7 +66,7 @@ class App extends React.Component {
 
           <Faq faq={this.state.faq} />
 
-          <Seller seller={this.state.seller} />
+          <SellerInfo seller={this.state.seller} />
 
         </div>
       </div>
@@ -74,4 +74,4 @@ class App extends React.Component {
   }
 }
 
-reactDOM.render(<App />, document.getElementById('app'));
+reactDOM.render(<Seller />, document.getElementById('seller'));
