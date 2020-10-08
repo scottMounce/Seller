@@ -51,7 +51,7 @@ class Shipping extends React.Component {
             Estimated arrival
           </div>
           <div class="estimated-arrival-date">
-            Oct 19-21
+            {moment().businessAdd(this.props.seller.shippingSpeedFastest + 5).format("MMM D")}-{moment().businessAdd(this.props.seller.shippingSpeedSlowest + 5).format("D")}
           </div>
         </div>
         <div class="shipping-timetable">
