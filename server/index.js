@@ -41,7 +41,7 @@ app.get('/api/seller/:sellerId', (req, res) => {
 
 //handle get request by provided faq's id
 app.get('/api/faq/:faqId', (req, res) => {
-  db.query(`SELECT * FROM faqTables WHERE id = ${req.param('faqId')};`, { type: Sequelize.QueryTypes.SELECT })
+  db.query(`SELECT * FROM faqTables WHERE sellerId = ${req.param('faqId')};`, { type: Sequelize.QueryTypes.SELECT })
     .then((result) => {
       res.json(result)
     })

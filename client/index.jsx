@@ -20,34 +20,43 @@ class Seller extends React.Component {
     }
   }
 
+
+
   getData() {
+    var url = window.location.pathname;
+    if (url.length < 2) {
+      url = '1';
+    }
+    var id = url.substring(url.lastIndexOf('/' + 1));
     axios({
       method: 'get',
-      url: 'http://localhost:3004/api/item/1'
+      url: `http://localhost:3004/api/item/${id}`
     })
       .then((res) => {
         console.log('item getting: ', res.data[0])
-        this.setState({item: res.data[0]})
+        this.setState({item: res.data[0]});
+        return res
       })
-      .then(
+      .then((data) => {
         axios({
           method: 'get',
-          url: `http://localhost:3004/api/seller/1`
+          url: `http://localhost:3004/api/seller/${data.data[0].sellerID}`
         })
           .then ((respond) => {
             this.setState({seller: respond.data[0]})
+            return respond
           })
-          .then(
+          .then((data) => {
             axios({
               method: 'get',
-              url: 'http://localhost:3004/api/faq/1'
+              url: `http://localhost:3004/api/faq/${data.data[0].id}`
             })
-              .then ((resp) => {
-                this.setState({faq: resp.data[0]})
-                console.log(this.state)
-              })
-          )
-      )
+            .then ((resp) => {
+              this.setState({faq: resp.data[0]})
+              console.log(this.state)
+            })
+          })
+      })
   }
 
   componentDidMount() {

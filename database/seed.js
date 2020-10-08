@@ -50,7 +50,7 @@ let generateSellerData = function() {
   return data
 }
 
-//generate 10 FAQs
+//generate 19 FAQs
 let generateFaqData = function() {
   let data = [];
 
@@ -62,14 +62,14 @@ let generateFaqData = function() {
   }
   data.push(origianlParam)
 
-  //generate 9 more FAQs
-  for (let i = 2; i <= 10; i++) {
+  //generate 18 more FAQs
+  for (let i = 2; i <= 20; i++) {
     let params = {
       question: faker.lorem.sentence(5, "?"),
       //question: randomQuestion,
       answer: faker.lorem.sentences(2),
 
-      sellerID: i
+      sellerID: Math.ceil(i/2)
     }
 
     data.push(params)
