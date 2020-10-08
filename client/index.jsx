@@ -16,7 +16,7 @@ class Seller extends React.Component {
     this.state = {
       item: {},
       seller: {},
-      faq: {}
+      faq: {},
     }
   }
 
@@ -69,7 +69,7 @@ class Seller extends React.Component {
       <div class="info">
         <div class="info-wrap">
 
-          <Item item={this.state.item} />
+          <Item item={this.state.item} des={this.state.description} />
 
           <Shipping seller={this.state.seller} />
 
