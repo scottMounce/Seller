@@ -49,7 +49,7 @@ class Seller extends React.Component {
           .then((data) => {
             axios({
               method: 'get',
-              url: `http://localhost:3004/api/faq/${id}`
+              url: `http://localhost:3004/api/faq/${data.data[0].id}`
             })
             .then ((resp) => {
               this.setState({faq: resp.data[0]})
