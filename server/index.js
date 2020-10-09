@@ -3,10 +3,11 @@ const Sequelize = require('sequelize');
 const db = require('../database/index.js');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = required('cors')
 
 const app = express();
 const port = 3004;
-
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/../client/dist')));
