@@ -30,7 +30,7 @@ class Seller extends React.Component {
     var id = url.substring(url.lastIndexOf('/' + 1));
     axios({
       method: 'get',
-      url: `http://localhost:3004/api/item/${id}`
+      url: `http://localhost:3004/api/item${id}`
     })
       .then((res) => {
         console.log('item getting: ', res.data[0])
