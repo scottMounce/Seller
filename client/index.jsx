@@ -30,7 +30,7 @@ class Seller extends React.Component {
     var id = url.substring(url.lastIndexOf('/' + 1));
     axios({
       method: 'get',
-      url: `ec2-54-219-14-63.us-west-1.compute.amazonaws.com/api/item${id}`
+      url: `ec2-54-215-167-3.us-west-1.compute.amazonaws.com/api/item${id}`
     })
       .then((res) => {
         console.log('item getting: ', res.data[0])
@@ -40,7 +40,7 @@ class Seller extends React.Component {
       .then((data) => {
         axios({
           method: 'get',
-          url: `ec2-54-219-14-63.us-west-1.compute.amazonaws.com/api/seller/${data.data[0].sellerID}`
+          url: `ec2-54-215-167-3.us-west-1.compute.amazonaws.com/api/seller/${data.data[0].sellerID}`
         })
           .then ((respond) => {
             this.setState({seller: respond.data[0]})
@@ -49,7 +49,7 @@ class Seller extends React.Component {
           .then((data) => {
             axios({
               method: 'get',
-              url: `ec2-54-219-14-63.us-west-1.compute.amazonaws.com/api/faq/${data.data[0].id}`
+              url: `ec2-54-215-167-3.us-west-1.compute.amazonaws.com/api/faq/${data.data[0].id}`
             })
             .then ((resp) => {
               this.setState({faq: resp.data[0]})
