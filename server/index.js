@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 const db = require('../database/index.js');
 const bodyParser = require('body-parser');
 const path = require('path');
-const cors = required('cors')
+const cors = require('cors')
 
 const app = express();
 const port = 3004;
